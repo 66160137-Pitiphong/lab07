@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างที่ 3: การใช้งานตัวแปรและการคำนวณ</title>
+</head>
+<body>
+    <h3>คำนวณพื้นที่สี่เหลี่ยม</h3>
+    กว้าง: <input type="number" id="width"><br>
+    ยาว: <input type="number" id="length"><br>
+    <button onclick="calculateArea()">คำนวณ</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateArea() {
+            // รับค่าความกว้างและความยาว
+            let width = document.getElementById("width").value;
+            let length = document.getElementById("length").value;
+
+            // ตรวจสอบว่าผู้ใช้กรอกค่าหรือไม่
+            if (width && length) {
+                let area = width * length; // คำนวณพื้นที่
+                document.getElementById("result").textContent = "พื้นที่สี่เหลี่ยม = " + area + " ตารางหน่วย";
+            } else {
+                alert("กรุณากรอกค่าทั้งสองช่อง!");
+            }
+        }
+    </script>
+</body>
+</html>
